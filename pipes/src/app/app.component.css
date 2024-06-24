@@ -10,3 +10,6 @@
     background: bisque;
     border-radius: 20px;
 }
+.json-container{
+    width: 200px !important;
+}
