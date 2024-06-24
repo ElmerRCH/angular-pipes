@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { UpperCasePipe,LowerCasePipe,SlicePipe,CurrencyPipe, PercentPipe,JsonPipe} from '@angular/common';
+import { ModalJsonComponent } from './components/modal-json/modal-json.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,UpperCasePipe,LowerCasePipe,SlicePipe,CurrencyPipe,PercentPipe,JsonPipe],
+  imports: [RouterOutlet,UpperCasePipe,LowerCasePipe,SlicePipe,CurrencyPipe,PercentPipe,JsonPipe,ModalJsonComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
