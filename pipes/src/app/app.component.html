@@ -1,7 +1,7 @@
 <h1 class="mt-3 text-center"> pipes</h1>
 <hr>
 
-<div class="row blur">
+<div class="row blur" [ngClass]="{'blur': modalActive}" >
   <div class="col">
 
     <table class="table container-table">
@@ -83,7 +83,7 @@
           <tr >
             <td></td>
             <td>currency</td>
-            <td class="json-container"><button type="button" class="btn btn-primary">ver json</button></td>
+            <td class="json-container"><button (click)="verJson()" type="button" class="btn btn-primary">ver json</button></td>
           </tr>
 
         </tbody> 
@@ -92,4 +92,7 @@
   </div>
   
 </div>
-<app-modal-json></app-modal-json>
+<ng-container>
+  
+</ng-container>
+<app-modal-json  *ngIf="modalActive"></app-modal-json>
