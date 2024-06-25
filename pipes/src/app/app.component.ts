@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { UpperCasePipe,LowerCasePipe,SlicePipe,CurrencyPipe, PercentPipe,JsonPipe,CommonModule} from '@angular/common';
+import { CommonModule} from '@angular/common';
 import { ModalJsonComponent } from './components/modal-json/modal-json.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,UpperCasePipe,LowerCasePipe,SlicePipe,CurrencyPipe,PercentPipe,JsonPipe,ModalJsonComponent,CommonModule],
+  imports: [RouterOutlet,ModalJsonComponent,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
   modalActive = false
 
@@ -26,11 +27,17 @@ export class AppComponent {
       calle:'Primera',
       casa:200
     }
-
+    
   }
   
   verJson(){
     this.modalActive = true
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  closeModal(){
+    
+    this.modalActive = false
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    
   }
 }

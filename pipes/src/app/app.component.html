@@ -95,4 +95,4 @@
 <ng-container>
   
 </ng-container>
-<app-modal-json  *ngIf="modalActive"></app-modal-json>
+<app-modal-json (modal)="closeModal()" [json]="heroe" *ngIf="modalActive"></app-modal-json>

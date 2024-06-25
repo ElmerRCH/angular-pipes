@@ -19,3 +19,8 @@ button{
     border-radius: 10px;
 
 }
+pre{
+    font-size: 30px;
+    margin-top: 20%;
+    text-align: center;
+}
